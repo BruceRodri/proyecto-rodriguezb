@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="medicos.html">Médicos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login">
+        <!-- 🔹 (3) Logotipo -->
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo de la empresa" class="logo">
+        </div>
+
+        <h2>Inicio de Sesión</h2>
+
+        <form id="loginForm">
+            <label for="username">Nombre de Usuario o Correo:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Iniciar Sesión</button>
+
+            <p id="errorMessage" style="color: red; display: none;"></p>
+
+            <p class="password-recovery">
+                <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
+            </p>
+
+            <div class="social-login">
+                <button id="googleLogin" class="google-btn">Iniciar sesión con Google</button>
+                <button id="facebookLogin" class="facebook-btn">Iniciar sesión con Facebook</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        // 🔹 (6) Verificar si ya hay una sesión activa
+        if (localStorage.getItem('token')) {
+            window.location.href = 'inicio.html';
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (!username || !password) {
+                errorMessage.textContent = 'Todos los campos son obligatorios';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            if (password.length < 6) {
+                errorMessage.textContent = 'La contraseña debe tener al menos 6 caracteres';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            errorMessage.textContent = '';
+            window.location.href = 'inicio.html'; // Simulación de inicio de sesión exitoso
+        });
+
+        document.getElementById('googleLogin').addEventListener('click', () => {
+            alert('Redirigiendo a Google...');
+        });
+
+        document.getElementById('facebookLogin').addEventListener('click', () => {
+            alert('Redirigiendo a Facebook...');
+        });
+    </script>
+
+</body>
+</html>

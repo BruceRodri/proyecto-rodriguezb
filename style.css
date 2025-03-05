@@ -1,0 +1,283 @@
+/* ESTILOS GENERALES */
+body {
+    background-image: url('images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ESTILOS DE LA BARRA DE NAVEGACIÓN */
+nav {
+    background: #ADD7FFB8;
+    padding: 15px 0;
+    position: relative;
+    top: -10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #003366;
+}
+
+/* SECCIÓN HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    text-align: left;
+    max-width: 50%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.hero img {
+    width: 80%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 16px;
+    max-width: 600px;
+    color: white;
+}
+
+/* FORMULARIO DE INICIO DE SESIÓN */
+.login {
+    background-color: rgb(187, 181, 181);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.login h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login label {
+    font-size: 16px;
+    color: #555;
+    display: block;
+    text-align: left;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* ENLACE DE RECUPERACIÓN DE CONTRASEÑA */
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #003366;
+}
+
+/* BOTONES DE INICIO DE SESIÓN SOCIAL */
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.google-login {
+    background-color: #db4437;
+    color: white;
+}
+
+.google-login:hover {
+    background-color: #c1351d;
+}
+
+.facebook-login {
+    background-color: #3b5998;
+    color: white;
+}
+
+.facebook-login:hover {
+    background-color: #2d4373;
+}
+
+/* LOGOTIPO */
+.logo {
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* ESTILOS PARA LA PÁGINA DE RECUPERACIÓN */
+.recover-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recover-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* TÍTULO DE RECUPERACIÓN */
+.recover-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* ESTILOS DEL FORMULARIO */
+.recover-container label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+/* INPUT PARA EL EMAIL */
+.recover-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* EFECTO AL HACER FOCUS EN INPUT */
+.recover-container input[type="email"]:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+/* BOTÓN DE ENVÍO */
+.recover-container button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* EFECTO HOVER DEL BOTÓN */
+.recover-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* TEXTO PARA VOLVER AL LOGIN */
+.recover-container .back-to-login {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.recover-container .back-to-login a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.recover-container .back-to-login a:hover {
+    color: #0056b3;
+}
+
+/* RESPONSIVE PARA MÓVILES */
+@media (max-width: 480px) {
+    .recover-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
